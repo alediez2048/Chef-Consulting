@@ -3,13 +3,13 @@ import { motion } from 'framer-motion'
 
 function Mirada() {
     return (
-        <section className="min-h-screen flex items-center py-32 md:py-48 px-6 md:px-12 lg:px-20 bg-deep-black text-cream relative overflow-hidden">
+        <section className="min-h-[80vh] md:min-h-screen flex items-center py-20 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 bg-deep-black text-cream relative overflow-hidden">
             {/* Background text pattern */}
-            <div className="absolute inset-0 opacity-[0.03] text-[8rem] font-serif leading-tight overflow-hidden pointer-events-none">
-                <div className="transform -rotate-6">
-                    decisiones decisiones decisiones decisiones decisiones<br />
-                    decisiones decisiones decisiones decisiones decisiones<br />
-                    decisiones decisiones decisiones decisiones decisiones
+            <div className="absolute inset-0 opacity-[0.03] text-[4rem] md:text-[8rem] font-serif leading-tight overflow-hidden pointer-events-none select-none">
+                <div className="transform -rotate-6 whitespace-nowrap">
+                    decisiones decisiones decisiones decisiones<br />
+                    decisiones decisiones decisiones decisiones<br />
+                    decisiones decisiones decisiones decisiones
                 </div>
             </div>
 
@@ -20,12 +20,12 @@ function Mirada() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
             >
-                <h2 className="text-sm uppercase tracking-[0.3em] text-burnt-sienna mb-16">
+                <h2 className="text-xs md:text-sm uppercase tracking-[0.2em] md:tracking-[0.3em] text-burnt-sienna mb-8 md:mb-16">
                     Mirada / Filosofía
                 </h2>
 
                 <motion.p
-                    className="text-[clamp(2rem,5vw,6rem)] font-serif leading-[1.1] mb-16"
+                    className="text-3xl md:text-5xl lg:text-6xl font-serif leading-[1.2] md:leading-[1.1] mb-10 md:mb-16"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -36,7 +36,7 @@ function Mirada() {
                 </motion.p>
 
                 <motion.div
-                    className="md:ml-auto md:max-w-2xl space-y-8 text-xl md:text-2xl leading-relaxed opacity-90"
+                    className="md:ml-auto md:max-w-2xl space-y-6 md:space-y-8 text-lg md:text-xl lg:text-2xl leading-relaxed opacity-90"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 0.9 }}
                     viewport={{ once: true }}

@@ -10,7 +10,7 @@ function Imagenes() {
     ]
 
     return (
-        <section className="py-32 md:py-48 px-6 md:px-12 lg:px-20 bg-white">
+        <section className="py-20 md:py-32 lg:py-48 px-6 md:px-12 lg:px-20 bg-white">
             <motion.div
                 className="max-w-7xl mx-auto"
                 initial={{ opacity: 0, y: 50 }}
@@ -18,21 +18,21 @@ function Imagenes() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
             >
-                <div className="mb-20 max-w-3xl">
-                    <p className="text-2xl md:text-3xl text-charcoal leading-relaxed mb-6">
+                <div className="mb-12 md:mb-20 max-w-3xl">
+                    <p className="text-xl md:text-2xl lg:text-3xl text-charcoal leading-relaxed mb-4 md:mb-6">
                         El proceso importa tanto como el resultado.<br />
                         Aquí no hay artificios, solo cocina, trabajo y tiempo.
                     </p>
-                    <p className="text-lg italic text-mid-gray">
+                    <p className="text-base md:text-lg italic text-mid-gray">
                         (Las imágenes deben hablar por sí solas.)
                     </p>
                 </div>
 
                 {/* Asymmetric image grid */}
-                <div className="grid grid-cols-12 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
                     {/* Large left image */}
                     <motion.div
-                        className="col-span-12 md:col-span-7 aspect-[4/3] overflow-hidden"
+                        className="md:col-span-7 aspect-[4/3] overflow-hidden"
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -47,7 +47,7 @@ function Imagenes() {
 
                     {/* Top right image */}
                     <motion.div
-                        className="col-span-12 md:col-span-5 aspect-square overflow-hidden"
+                        className="md:col-span-5 aspect-square overflow-hidden"
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -62,7 +62,7 @@ function Imagenes() {
 
                     {/* Bottom left image */}
                     <motion.div
-                        className="col-span-12 md:col-span-5 aspect-[3/4] overflow-hidden"
+                        className="md:col-span-5 aspect-[3/4] overflow-hidden"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -77,7 +77,7 @@ function Imagenes() {
 
                     {/* Large bottom right image */}
                     <motion.div
-                        className="col-span-12 md:col-span-7 aspect-video overflow-hidden"
+                        className="md:col-span-7 aspect-video overflow-hidden"
                         initial={{ opacity: 0, y: 50 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
