@@ -33,7 +33,7 @@ function Credibilidad() {
                         transition={{ duration: 0.6 }}
                     >
                         <img
-                            src="/ingredients.png"
+                            src="/Chef-Consulting/ingredients.png"
                             alt="Fresh ingredients"
                             className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
                         />

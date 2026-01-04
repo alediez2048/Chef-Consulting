@@ -3,10 +3,10 @@ import { motion } from 'framer-motion'
 
 function Imagenes() {
     const images = [
-        { src: '/plating.png', alt: 'Plating precision' },
-        { src: '/workspace.png', alt: 'Kitchen workspace' },
-        { src: '/fire.png', alt: 'Cooking with fire' },
-        { src: '/knife.png', alt: 'Knife technique' }
+        { src: '/Chef-Consulting/plating.png', alt: 'Plating precision' },
+        { src: '/Chef-Consulting/workspace.png', alt: 'Kitchen workspace' },
+        { src: '/Chef-Consulting/fire.png', alt: 'Cooking with fire' },
+        { src: '/Chef-Consulting/knife.png', alt: 'Knife technique' }
     ]
 
     return (
