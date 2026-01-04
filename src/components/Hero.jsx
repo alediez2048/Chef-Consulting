@@ -39,8 +39,8 @@ function Hero() {
                     >
                         Gastronomía<br />
                         con criterio,<br />
-                        <span className="italic text-burnt-sienna">técnica</span><br />
-                        y propósito.
+                        <span className="italic text-burnt-sienna">técnica</span> y<br />
+                        propósito.
                     </motion.h1>
 
                     <motion.div
