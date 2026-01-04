@@ -1,11 +1,24 @@
 import React from 'react'
+import Hero from './components/Hero'
+import Credibilidad from './components/Credibilidad'
+import QueHago from './components/QueHago'
+import ComoTrabajo from './components/ComoTrabajo'
+import Mirada from './components/Mirada'
+import Trayectoria from './components/Trayectoria'
+import Imagenes from './components/Imagenes'
+import CTAFinal from './components/CTAFinal'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <h1 className="text-4xl font-serif text-center py-20">
-        Kike Mujica — Consultoría Gastronómica
-      </h1>
+    <div className="min-h-screen">
+      <Hero />
+      <Credibilidad />
+      <QueHago />
+      <ComoTrabajo />
+      <Mirada />
+      <Trayectoria />
+      <Imagenes />
+      <CTAFinal />
     </div>
   )
 }
