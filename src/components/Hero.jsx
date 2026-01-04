@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import bioImage from '../assets/bio-pic-image.png'
 
 function Hero() {
     return (
@@ -9,30 +10,17 @@ function Hero() {
                 K
             </div>
 
-            {/* Background image - subtle, offset */}
+            {/* Grid Layout */}
             <motion.div
-                className="absolute right-0 top-1/4 w-2/3 md:w-1/3 h-1/2 md:h-2/3 opacity-20"
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 0.2, x: 0 }}
-                transition={{ duration: 1.2, delay: 0.3 }}
-            >
-                <img
-                    src="/hero-hands.png"
-                    alt=""
-                    className="w-full h-full object-cover grayscale"
-                />
-            </motion.div>
-
-            <motion.div
-                className="max-w-7xl w-full relative z-10"
+                className="max-w-7xl w-full relative z-10 grid md:grid-cols-12 gap-y-12 md:gap-x-16 items-center"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             >
-                {/* Asymmetric layout - content on left */}
-                <div className="max-w-4xl">
+                {/* Left Column: Headline */}
+                <div className="md:col-span-7 relative z-20">
                     <motion.h1
-                        className="text-[3.5rem] md:text-[clamp(3rem,10vw,12rem)] font-serif text-deep-black leading-[1.1] md:leading-[0.9] mb-8 md:mb-12 tracking-tight break-words"
+                        className="text-[3.5rem] md:text-[clamp(3rem,9vw,11rem)] font-serif text-deep-black leading-[1.1] md:leading-[0.9] mb-8 md:mb-0 tracking-tight break-words"
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
@@ -42,14 +30,33 @@ function Hero() {
                         <span className="italic text-burnt-sienna">técnica</span> y<br />
                         propósito.
                     </motion.h1>
+                </div>
 
+                {/* Right Column: Bio Image + Content */}
+                <div className="md:col-span-5 flex flex-col items-start md:items-end md:text-right relative">
+                    {/* Bio Image */}
                     <motion.div
-                        className="ml-0 md:ml-24 max-w-xl space-y-6 md:space-y-8"
+                        className="w-full max-w-sm md:max-w-md mb-8 md:mb-12 relative grayscale hover:grayscale-0 transition-all duration-700"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 1, delay: 0.4 }}
+                    >
+                        <div className="absolute inset-0 bg-burnt-sienna opacity-0 mix-blend-multiply hover:opacity-10 transition-opacity duration-500"></div>
+                        <img
+                            src={bioImage}
+                            alt="Kike Mujica"
+                            className="w-full h-auto object-cover shadow-xl"
+                        />
+                    </motion.div>
+
+                    {/* Subtitle & CTA */}
+                    <motion.div
+                        className="max-w-sm"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.5 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <p className="text-lg md:text-xl lg:text-2xl text-warm-gray leading-relaxed max-w-[90%]">
+                        <p className="text-lg md:text-xl text-warm-gray leading-relaxed mb-8">
                             Consultoría gastronómica internacional basada en experiencia real, respeto por el producto y ejecución impecable.
                         </p>
 
