@@ -156,28 +156,33 @@ p {
     margin: 0 auto;
 }
 
-/* Services List */
-.services-list {
+/* Services List & Process List */
+.services-list,
+.process-list {
     margin-top: 4rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.service-item {
+.service-item,
+.process-item {
     padding-bottom: 3rem;
     border-bottom: 1px solid rgba(106, 106, 106, 0.2);
 }
 
-.service-item:last-child {
+.service-item:last-child,
+.process-item:last-child {
     border-bottom: none;
 }
 
-.service-item h3 {
+.service-item h3,
+.process-item h3 {
     color: var(--charcoal-text);
 }
 
-.service-item p {
+.service-item p,
+.process-item p {
     color: var(--warm-gray);
 }
 
