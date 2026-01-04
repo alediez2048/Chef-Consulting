@@ -24,6 +24,21 @@ function Credibilidad() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
+                    {/* Added image */}
+                    <motion.div
+                        className="mb-12 overflow-hidden"
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        <img
+                            src="/ingredients.png"
+                            alt="Fresh ingredients"
+                            className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700"
+                        />
+                    </motion.div>
+
                     <p className="text-2xl md:text-3xl text-charcoal leading-relaxed">
                         He trabajado en cocinas y proyectos gastronómicos en <strong>Venezuela, Argentina, España e Irlanda</strong>, colaborando con equipos, marcas y conceptos que entienden la cocina como un oficio serio, no como una moda.
                     </p>

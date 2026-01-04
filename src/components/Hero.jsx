@@ -9,8 +9,22 @@ function Hero() {
                 K
             </div>
 
+            {/* Background image - subtle, offset */}
             <motion.div
-                className="max-w-7xl w-full"
+                className="absolute right-0 top-1/4 w-1/3 h-2/3 opacity-20"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 0.2, x: 0 }}
+                transition={{ duration: 1.2, delay: 0.3 }}
+            >
+                <img
+                    src="/hero-hands.png"
+                    alt=""
+                    className="w-full h-full object-cover grayscale"
+                />
+            </motion.div>
+
+            <motion.div
+                className="max-w-7xl w-full relative z-10"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
