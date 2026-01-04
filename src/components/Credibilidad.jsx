@@ -3,23 +3,39 @@ import { motion } from 'framer-motion'
 
 function Credibilidad() {
     return (
-        <section className="section-spacing bg-white">
-            <motion.div
-                className="content-container"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            >
-                <h2 className="text-h1 text-deep-black mb-8">Credibilidad</h2>
-                <p className="text-body text-warm-gray mb-6">
-                    He trabajado en cocinas y proyectos gastronómicos en Venezuela, Argentina, España e Irlanda, colaborando con equipos, marcas y conceptos que entienden la cocina como un oficio serio, no como una moda.
-                </p>
-                <p className="text-body text-charcoal italic">
-                    Cada lugar me dejó una enseñanza distinta.<br />
-                    Todas forman parte del mismo lenguaje.
-                </p>
-            </motion.div>
+        <section className="py-32 md:py-48 px-6 md:px-12 lg:px-20 bg-white">
+            <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-start">
+                {/* Offset title - spans 3 columns */}
+                <motion.h2
+                    className="md:col-span-3 text-6xl md:text-8xl font-serif text-deep-black sticky top-32"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    Credi­bilidad
+                </motion.h2>
+
+                {/* Content offset - starts at column 5, spans 7 */}
+                <motion.div
+                    className="md:col-start-5 md:col-span-7 space-y-8"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                    <p className="text-2xl md:text-3xl text-charcoal leading-relaxed">
+                        He trabajado en cocinas y proyectos gastronómicos en <strong>Venezuela, Argentina, España e Irlanda</strong>, colaborando con equipos, marcas y conceptos que entienden la cocina como un oficio serio, no como una moda.
+                    </p>
+
+                    <div className="border-l-4 border-burnt-sienna pl-8 py-4">
+                        <p className="text-xl text-charcoal italic leading-relaxed">
+                            Cada lugar me dejó una enseñanza distinta.<br />
+                            Todas forman parte del mismo lenguaje.
+                        </p>
+                    </div>
+                </motion.div>
+            </div>
         </section>
     )
 }

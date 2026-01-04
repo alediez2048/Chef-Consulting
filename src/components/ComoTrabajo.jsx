@@ -25,58 +25,49 @@ function ComoTrabajo() {
         }
     ]
 
-    const containerVariants = {
-        hidden: {},
-        visible: {
-            transition: {
-                staggerChildren: 0.15
-            }
-        }
-    }
-
-    const itemVariants = {
-        hidden: { opacity: 0, x: -30 },
-        visible: { opacity: 1, x: 0 }
-    }
-
     return (
-        <section className="section-spacing bg-white">
-            <motion.div
-                className="content-container"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.6 }}
-            >
-                <h2 className="text-h1 text-deep-black mb-8">Cómo Trabajo</h2>
-                <p className="text-lead text-charcoal mb-16 font-medium">
-                    Un proceso simple, honesto y enfocado en resultados.
-                </p>
+        <section className="py-40 md:py-60 px-6 md:px-12 lg:px-20 bg-white">
+            <div className="max-w-7xl mx-auto">
+                {/* Narrow title column */}
+                <div className="mb-32">
+                    <motion.h2
+                        className="text-[clamp(2.5rem,6vw,8rem)] font-serif text-deep-black leading-none max-w-3xl"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        Cómo Trabajo
+                    </motion.h2>
+                </div>
 
-                <motion.div
-                    className="space-y-10"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                >
+                {/* Offset process list */}
+                <div className="md:ml-auto md:max-w-4xl space-y-24">
                     {pasos.map((paso, index) => (
                         <motion.div
                             key={index}
-                            className="flex gap-8 items-start"
-                            variants={itemVariants}
+                            className="relative"
+                            initial={{ opacity: 0, x: 50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.5, delay: index * 0.15 }}
                         >
-                            <div className="text-6xl font-serif text-burnt-sienna flex-shrink-0 leading-none">
+                            {/* Huge number background */}
+                            <div className="absolute -left-4 md:-left-20 top-0 text-[12rem] md:text-[16rem] font-serif text-burnt-sienna opacity-10 leading-none pointer-events-none">
                                 {paso.numero}
                             </div>
-                            <div className="pt-2">
-                                <h3 className="text-h2 text-deep-black mb-3">{paso.titulo}</h3>
-                                <p className="text-body text-warm-gray">{paso.descripcion}</p>
+
+                            <div className="relative z-10 pl-8 md:pl-20 pt-12">
+                                <h3 className="text-4xl md:text-5xl font-serif text-deep-black mb-6">
+                                    {paso.titulo}
+                                </h3>
+                                <p className="text-xl md:text-2xl text-warm-gray leading-relaxed max-w-2xl">
+                                    {paso.descripcion}
+                                </p>
                             </div>
                         </motion.div>
                     ))}
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </section>
     )
 }

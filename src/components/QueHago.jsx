@@ -25,59 +25,53 @@ function QueHago() {
         }
     ]
 
-    const containerVariants = {
-        hidden: {},
-        visible: {
-            transition: {
-                staggerChildren: 0.1
-            }
-        }
-    }
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    }
-
     return (
-        <section className="section-spacing bg-cream">
-            <motion.div
-                className="content-container"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-100px' }}
-                transition={{ duration: 0.6 }}
-            >
-                <h2 className="text-h1 text-deep-black mb-8">Qué Hago</h2>
-                <p className="text-lead text-charcoal mb-6 font-medium">
-                    Consultoría gastronómica para proyectos que quieren durar.
-                </p>
-                <p className="text-body text-warm-gray mb-16">
-                    Trabajo con restaurantes, grupos gastronómicos y emprendedores que buscan claridad antes de crecer, estructura antes de escalar y coherencia antes de abrir.
-                </p>
+        <section className="py-32 md:py-48 px-6 md:px-12 lg:px-20 bg-cream relative">
+            {/* Large background text */}
+            <div className="absolute top-0 right-0 text-[15rem] font-serif text-deep-black opacity-[0.015] leading-none pointer-events-none">
+                Qué
+            </div>
 
-                <h3 className="text-h2 text-charcoal mb-12">Mis servicios incluyen:</h3>
+            <div className="max-w-7xl mx-auto">
+                {/* Title spans full width, aligned right on desktop */}
                 <motion.div
-                    className="space-y-10"
-                    variants={containerVariants}
-                    initial="hidden"
-                    whileInView="visible"
+                    className="mb-20 text-left md:text-right"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
+                    <h2 className="text-[clamp(3rem,8vw,10rem)] font-serif text-deep-black leading-none mb-8">
+                        Qué Hago
+                    </h2>
+                    <p className="text-2xl md:text-3xl text-charcoal max-w-2xl md:ml-auto font-medium">
+                        Consultoría gastronómica para proyectos que quieren <em className="italic text-burnt-sienna">durar</em>.
+                    </p>
+                </motion.div>
+
+                {/* Two-column service list */}
+                <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
                     {servicios.map((servicio, index) => (
                         <motion.div
                             key={index}
-                            className="border-l-2 border-burnt-sienna pl-6"
-                            variants={itemVariants}
+                            className="space-y-4"
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.4, delay: index * 0.1 }}
                         >
-                            <h4 className="text-xl font-serif font-medium text-deep-black mb-2">
+                            <div className="text-8xl font-serif text-burnt-sienna opacity-20">
+                                {String(index + 1).padStart(2, '0')}
+                            </div>
+                            <h3 className="text-2xl font-serif text-deep-black leading-tight">
                                 {servicio.titulo}
-                            </h4>
-                            <p className="text-body text-warm-gray">{servicio.descripcion}</p>
+                            </h3>
+                            <p className="text-lg text-warm-gray leading-relaxed">
+                                {servicio.descripcion}
+                            </p>
                         </motion.div>
                     ))}
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
         </section>
     )
 }
