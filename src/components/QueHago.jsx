@@ -26,40 +26,40 @@ function QueHago() {
     ]
 
     return (
-        <section className="py-32 md:py-48 px-6 md:px-12 lg:px-20 bg-cream relative">
+        <section className="py-20 md:py-48 px-6 md:px-12 lg:px-20 bg-cream relative overflow-hidden">
             {/* Large background text */}
-            <div className="absolute top-0 right-0 text-[15rem] font-serif text-deep-black opacity-[0.015] leading-none pointer-events-none">
+            <div className="absolute top-0 right-0 text-[8rem] md:text-[15rem] font-serif text-deep-black opacity-[0.015] leading-none pointer-events-none">
                 Qué
             </div>
 
             <div className="max-w-7xl mx-auto">
                 {/* Title spans full width, aligned right on desktop */}
                 <motion.div
-                    className="mb-20 text-left md:text-right"
+                    className="mb-12 md:mb-20 text-left md:text-right"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-[clamp(3rem,8vw,10rem)] font-serif text-deep-black leading-none mb-8">
+                    <h2 className="text-[4rem] md:text-[clamp(3rem,8vw,10rem)] font-serif text-deep-black leading-none mb-4 md:mb-8">
                         Qué Hago
                     </h2>
-                    <p className="text-2xl md:text-3xl text-charcoal max-w-2xl md:ml-auto font-medium">
+                    <p className="text-xl md:text-3xl text-charcoal max-w-2xl md:ml-auto font-medium">
                         Consultoría gastronómica para proyectos que quieren <em className="italic text-burnt-sienna">durar</em>.
                     </p>
                 </motion.div>
 
                 {/* Two-column service list */}
-                <div className="grid md:grid-cols-2 gap-x-20 gap-y-16">
+                <div className="grid md:grid-cols-2 gap-x-20 gap-y-12 md:gap-y-16">
                     {servicios.map((servicio, index) => (
                         <motion.div
                             key={index}
-                            className="space-y-4"
+                            className="space-y-4 relative pl-16 md:pl-0"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                         >
-                            <div className="text-8xl font-serif text-burnt-sienna opacity-20">
+                            <div className="text-6xl md:text-8xl font-serif text-burnt-sienna opacity-20 absolute left-0 top-0 md:static md:mb-2 leading-none">
                                 {String(index + 1).padStart(2, '0')}
                             </div>
                             <h3 className="text-2xl font-serif text-deep-black leading-tight">
