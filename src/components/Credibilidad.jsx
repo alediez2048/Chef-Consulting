@@ -3,11 +3,11 @@ import { motion } from 'framer-motion'
 
 function Credibilidad() {
     return (
-        <section className="py-32 md:py-48 px-6 md:px-12 lg:px-20 bg-white">
+        <section className="py-20 md:py-48 px-6 md:px-12 lg:px-20 bg-white">
             <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-start">
                 {/* Offset title - spans 3 columns */}
                 <motion.h2
-                    className="md:col-span-3 text-6xl md:text-8xl font-serif text-deep-black sticky top-32"
+                    className="md:col-span-3 text-4xl md:text-6xl lg:text-8xl font-serif text-deep-black md:sticky md:top-32 mb-8 md:mb-0"
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
