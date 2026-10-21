@@ -1,16 +1,24 @@
-# React + Vite
+# Kike Mujica, Consultoría Gastronómica
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A one-page site for a restaurant consultant: who he is, what he does, how he works, and how to reach him. The copy is in Spanish.
 
-Currently, two official plugins are available:
+Live: https://alediez2048.github.io/Chef-Consulting/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sections
 
-## React Compiler
+Hero, his outlook on hospitality (Mirada), services (Qué hago), track record (Trayectoria), how an engagement runs (Cómo trabajo), credentials (Credibilidad), a photo gallery, and a closing call to action. Each section is one component in `src/components/`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+React 18 and Vite, Tailwind CSS for layout and type, and Framer Motion for scroll-triggered reveals. Fonts are Playfair Display and Inter.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Run it
+
+```bash
+npm install
+npm run dev       # local dev server
+npm run build     # production build in dist/
+npm run deploy    # build and publish dist/ to the gh-pages branch
+```
+
+The Vite `base` is `/Chef-Consulting/` to match the GitHub Pages path.
